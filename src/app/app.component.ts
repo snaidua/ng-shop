@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-shop';
+  title = 'NG-Shop';
+  icons = ["home", "search", "mins"];
+
+  iClick(ico: string) {
+    console.log(ico);
+  }
 }

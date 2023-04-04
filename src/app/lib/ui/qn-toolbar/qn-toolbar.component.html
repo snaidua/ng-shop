@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+
+    <span> {{title}} </span>
+
+    <span Qn-Spacer>  </span>
+
+    <span *ngFor="let icon of icons">
+        <button mat-icon-button (click)="onIconClick(icon)">
+            <mat-icon> {{icon}} </mat-icon>     
+        </button>
+    </span>
+    
+</mat-toolbar>
