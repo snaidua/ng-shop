@@ -9,8 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 
-import { QnToolbarComponent } from './ui/qn-toolbar/qn-toolbar.component';
-import { QnSpacerDirective } from './ui/qn-spacer.directive';
+import { QnToolbarComponent } from './components';
+import { QnSpacerDirective } from './directivies';
 
 
 @NgModule({
