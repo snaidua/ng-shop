@@ -1,13 +1,19 @@
 <mat-toolbar color="primary">
 
+    <ng-container *ngFor="let menu of lmenu">
+        <button mat-icon-button (click)="onIconClick(menu)">
+            <mat-icon> {{menu.icon}} </mat-icon>     
+        </button>
+    </ng-container>
+
     <span> {{title}} </span>
 
     <span Qn-Spacer>  </span>
 
-    <span *ngFor="let icon of icons">
-        <button mat-icon-button (click)="onIconClick(icon)">
-            <mat-icon> {{icon}} </mat-icon>     
+    <ng-container *ngFor="let menu of rmenu">
+        <button mat-icon-button (click)="onIconClick(menu)">
+            <mat-icon> {{menu.icon}} </mat-icon>     
         </button>
-    </span>
+    </ng-container>
     
 </mat-toolbar>

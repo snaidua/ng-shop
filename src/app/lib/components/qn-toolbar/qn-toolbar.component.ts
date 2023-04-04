@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { QnMenuModel } from '../../models';
 
 @Component({
   selector: 'Qn-Toolbar',
@@ -7,11 +8,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class QnToolbarComponent {
   @Input() title: string = "";
-  @Input() icons: string[] = [];
+  @Input() lmenu: QnMenuModel[] = [];
+  @Input() rmenu: QnMenuModel[] = [];
 
-  @Output() iconClick = new EventEmitter<string>();
+  @Output() iconClick = new EventEmitter<QnMenuModel>();
 
-  onIconClick(icon: string) {
-    this.iconClick.emit(icon);
+  onIconClick(menu: QnMenuModel) {
+    this.iconClick.emit(menu);
   }
 }

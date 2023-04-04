@@ -9,13 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 
-import { QnToolbarComponent } from './components';
+import { QnPageComponent, QnToolbarComponent } from './components';
 import { QnSpacerDirective } from './directivies';
-
 
 @NgModule({
   declarations: [
-    QnToolbarComponent,
+    QnPageComponent, QnToolbarComponent,
     QnSpacerDirective
   ],
   imports: [
@@ -25,7 +24,8 @@ import { QnSpacerDirective } from './directivies';
   exports: [
     MatToolbarModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, MatListModule,
     
-    QnToolbarComponent, QnSpacerDirective
+    QnPageComponent, QnToolbarComponent,
+    QnSpacerDirective
   ]
 })
 export class ExtModule { }

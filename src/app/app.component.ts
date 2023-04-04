@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QnMenuModel } from './lib/models';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NG-Shop';
-  icons = ["home", "search", "mins"];
+  
+  lmenu: QnMenuModel[] = [
+    {id:"l1", desc:"Menu", icon: "menu"}, {id:"l2", desc:"Shopping", icon: "shopping-cart"}
+  ];
 
-  iClick(ico: string) {
-    console.log(ico);
+  rmenu: QnMenuModel[] = [
+    {id:"r2", desc:"Search", icon: "search"}, {id:"r3", desc:"Add", icon: "add"}
+  ];
+
+  iClick(mnu: QnMenuModel) {
+    console.log(mnu);
   }
 }
