@@ -1,0 +1,11 @@
+.container {
+    padding: 5px;
+    margin: 5px;
+}
+
+.card {
+    padding: 10px;
+    background-color: lightgreen;
+
+    display: flex;
+}

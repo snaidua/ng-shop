@@ -1,0 +1,16 @@
+<div class="container">
+
+    <h3> PRODUCTS </h3>
+    <mat-action-list *ngFor="let prod of prods">
+        <mat-list-item (click)="UpdateCart(prod)">
+            
+            <div class="card">
+                <span> {{prod.name}} </span>
+                <span Qn-Spacer>  </span>
+                <span> {{prod.rate}} </span>
+            </div>
+
+        </mat-list-item>
+    </mat-action-list>
+    
+</div>

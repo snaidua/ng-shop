@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { QnMenuModel } from './lib/models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +10,19 @@ import { QnMenuModel } from './lib/models';
 export class AppComponent {
   title = 'NG-Shop';
   
+  constructor(private router: Router) {}
+
   lmenu: QnMenuModel[] = [
-    {id:"l1", desc:"Menu", icon: "menu"}, {id:"l2", desc:"Shopping", icon: "shopping-cart"}
+    
   ];
 
   rmenu: QnMenuModel[] = [
-    {id:"r2", desc:"Search", icon: "search"}, {id:"r3", desc:"Add", icon: "add"}
+    {id:"r1", desc:"Shopping", icon: "shopping-cart"}
   ];
 
   iClick(mnu: QnMenuModel) {
-    console.log(mnu);
+    if (mnu.id == "r1") {
+      this.router.navigate(["cart"]);
+    }
   }
 }

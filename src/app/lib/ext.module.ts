@@ -9,22 +9,26 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 
-import { QnPageComponent, QnToolbarComponent } from './components';
+import { QnToolbarComponent } from './components';
 import { QnSpacerDirective } from './directivies';
+import { QnCartService, QnProductService } from './services';
 
 @NgModule({
   declarations: [
-    QnPageComponent, QnToolbarComponent,
+    QnToolbarComponent,
     QnSpacerDirective
   ],
   imports: [
     CommonModule,
     MatToolbarModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, MatListModule 
   ],
+  providers: [
+    QnProductService, QnCartService
+  ],
   exports: [
     MatToolbarModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, MatListModule,
-    
-    QnPageComponent, QnToolbarComponent,
+
+    QnToolbarComponent,
     QnSpacerDirective
   ]
 })
